@@ -1,38 +1,22 @@
-# DDL exercise
-Creating Tables:
-Create a table named Movies with the following columns:
-movie_id (integer)
-title (varchar, maximum length 100)
-director (varchar, maximum length 50)
-release_year (integer)
-genre (varchar, maximum length 50)
+# DDL exercise 2
+Creating Tables with Null and Not Null Constraints:
+Create a table named Books with the following columns:
 
-Altering Tables:
-Alter the Movies table to add a new column named rating of type decimal(3, 1).
+book_id (integer)
+title (varchar, maximum length 100, not null)
+author (varchar, maximum length 50)
+genre (varchar, maximum length 50)
+publish_date (date, not null)
+Ensure that title and publish_date columns do not allow NULL values, while author and genre columns can have NULL values.
+
+Altering Tables with Not Null Constraints:
+Alter the Books table to modify the author column to not allow NULL values.
 
 Dropping Tables:
-Create a new table named Students with columns:
+Create a new table named Employees with the following columns:
 
-student_id (integer)
-student_name (varchar, maximum length 50)
-age (integer)
-grade (varchar, maximum length 2)
-Then, drop the Students table.
-
-Truncating Tables:
-Create a table named Events with columns:
-
-event_id (integer)
-event_name (varchar, maximum length 100)
-date (date)
-location (varchar, maximum length 100)
-Insert some sample data into the Events table. Once done, truncate the table to remove all records while keeping the table structure intact.
-
-Renaming Tables:
-Create a table named Restaurants with columns:
-
-restaurant_id (integer)
-name (varchar, maximum length 50)
-cuisine (varchar, maximum length 50)
-location (varchar, maximum length 100)
-Rename the table to DiningSpots.
+employee_id (integer)
+employee_name (varchar, maximum length 50, not null)
+department (varchar, maximum length 50)
+salary (decimal)
+Then, drop the Employees table.
